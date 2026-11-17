@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations | DineFinder</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER: Shared site navigation. -->
+    <header class="site-header">
+        <a class="brand" href="index.html">Dine<span>Finder</span></a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a class="active" href="recommendation.html">Recommendations</a>
+            <a href="register.html">Register</a>
+            <a class="nav-button" href="reservation.html">Reservation</a>
+        </nav>
+    </header>
+
+    <main class="page-main narrow-main">
+        <section class="page-banner">
+            <p class="eyebrow">A LITTLE HELP DECIDING</p>
+            <h1>What are you in the mood for?</h1>
+            <p>Choose your preferences and DineFinder will match them with a restaurant.</p>
+        </section>
+
+        <!-- RECOMMENDATION FORM: JavaScript reads these selections and applies simple matching rules. -->
+        <section class="form-panel"><form id="recommendForm" novalidate>
+            <div class="form-row"><label for="diet">Dietary preference</label>
+                <select id="diet" name="diet">
+                    <option value="none">No preference</option>
+                    <option value="vegetarian">Vegetarian-friendly</option>
+                    <option value="halal">Halal preference</option>
+                </select>
+            </div>
+            <div class="form-row"><label for="budget">Budget per person</label>
+                <select id="budget" name="budget">
+                    <option value="any">Any budget</option>
+                    <option value="low">Below RM25</option>
+                    <option value="medium">RM25–RM50</option>
+                    <option value="high">Above RM50</option>
+                </select>
+            </div>
+            <div class="form-row"><label for="purpose">Dining purpose</label>
+                <select id="purpose" name="purpose">
+                    <option value="any">Any occasion</option>
+                    <option value="friends">Friends / casual meal</option>
+                    <option value="date">Date / special occasion</option>
+                    <option value="family">Family meal</option>
+                    <option value="coffee">Coffee / brunch</option>
+                </select>
+            </div>
+            <button class="button" type="submit">Find my restaurant</button>
+        </form>
+            <div id="recommendResult" class="result-box" aria-live="polite">
+                <p>Your recommendation will appear here.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 DineFinder · Student project by Wen Jun</p>
+        <p>Discover local food, one table at a time.</p>
+    </footer>
+    
+</body>
+</html>

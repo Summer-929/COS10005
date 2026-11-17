@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation | DineFinder</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER: Shared site navigation. -->
+    <header class="site-header">
+        <a class="brand" href="index.html">Dine<span>Finder</span></a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="recommendation.html">Recommendations</a>
+            <a href="register.html">Register</a>
+            <a class="nav-button active" href="reservation.html">Reservation</a>
+        </nav>
+    </header>
+
+    <main class="page-main narrow-main">
+        <section class="page-banner">
+            <p class="eyebrow">SAVE YOUR SEAT</p>
+            <h1>Make a reservation</h1>
+            <p>Complete the form below. Your deposit updates when you choose a restaurant.</p>
+        </section>
+
+        <!-- RESERVATION FORM: POST destination follows the assignment brief. JavaScript validates and updates deposit/payment fields. -->
+        <section class="form-panel">
+            <form id="reservationForm" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" novalidate>
+            <div class="form-row">
+                <label for="fullName">Full name</label>
+                <input id="fullName" name="name" type="text" required>
+            </div>
+            <div class="form-row">
+                <label for="resEmail">Email address</label>
+                <input id="resEmail" name="email" type="email" required>
+            </div>
+            <div class="form-row">
+                <label for="resPhone">Phone number</label>
+                <input id="resPhone" name="phone" type="tel" required>
+            </div>
+            <div class="form-row">
+                <label for="restaurant">Restaurant</label>
+                <select id="restaurant" name="restaurant" required>
+                    <option value="">Choose a restaurant</option>
+                    <option value="yellow">Yellow Brick Road</option>
+                    <option value="envi">Envi Skydining</option>
+                    <option value="bangga">Bang Ga Bang Ga Korean</option>
+                    <option value="commonman">Common Man Coffee Roasters</option>
+                    <option value="buldojang">Buldojang</option>
+                    <option value="ayam">Ayam Gepuk Artisan</option>
+                </select>
+            </div>
+            <div class="form-two">
+                <div class="form-row">
+                    <label for="resDate">Reservation date</label>
+                    <input id="resDate" name="date" type="date" required>
+                </div>
+                <div class="form-row">
+                    <label for="resTime">Reservation time</label>
+                    <input id="resTime" name="time" type="time" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <label for="people">Number of people</label>
+                <input id="people" name="people" type="number" min="1" value="2" required>
+            </div>
+            <div class="form-row">
+                <label for="requests">Special requests (optional)</label>
+                <textarea id="requests" name="requests" rows="3" placeholder="Any seating or dining requests?"></textarea>
+            </div>
+            <div class="deposit-display">
+                <span>Deposit amount</span>
+                <strong id="depositAmount">RM0</strong>
+                <input type="hidden" id="depositValue" name="deposit" value="0">
+            </div>
+            <fieldset class="form-row">
+                <legend>Deposit method</legend>
+                <div class="radio-line">
+                    <label><input type="radio" name="paymentMethod" value="voucher" checked> Voucher</label>
+                    <label><input type="radio" name="paymentMethod" value="online"> Online payment</label>
+                </div>
+            </fieldset>
+            <div id="voucherFields" class="form-row">
+                <label for="voucher">Voucher code (12 digits)</label>
+                <input id="voucher" name="voucher" type="text" inputmode="numeric" maxlength="12" placeholder="12-digit code">
+            </div>
+            <div id="cardFields" class="hidden-fields">
+                <div class="form-row">
+                    <label for="cardType">Card type</label>
+                    <select id="cardType" name="cardType">
+                        <option value="visa">Visa / Mastercard</option>
+                        <option value="amex">American Express</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="cardNumber">Card number (test details only)</label>
+                    <input id="cardNumber" name="cardNumber" type="text" inputmode="numeric" placeholder="Enter fake card number">
+                </div>
+            </div>
+            <div class="form-row">
+                <label for="billingEmail">Billing email address</label>
+                <input id="billingEmail" name="billingEmail" type="email">
+            </div>
+            <div class="form-row">
+                <label class="check-label">
+                    <input id="sameEmail" type="checkbox"> Same as email address
+                </label>
+            </div>
+            <p id="reservationErrors" class="form-message" aria-live="polite"></p>
+            <button class="button" type="submit">Submit reservation</button>
+        </form>
+        <p class="small-note">Use fake card information only. This student project does not process real payments.</p></section>
+    </main>
+    
+    <footer>
+        <p>© 2026 DineFinder · Student project by Wen Jun</p>
+        <p>Discover local food, one table at a time.</p>
+    </footer>
+
+</body>
+</html>

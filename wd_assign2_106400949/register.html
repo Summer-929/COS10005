@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | DineFinder</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER: Shared site navigation. -->
+    <header class="site-header">
+        <a class="brand" href="index.html">Dine<span>Finder</span></a>
+        <nav aria-label="Main navigation">
+            <a class="active" href="index.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="recommendation.html">Recommendations</a>
+            <a href="register.html">Register</a>
+            <a class="nav-button" href="reservation.html">Reservation</a>
+        </nav>
+    </header>
+
+    <main class="page-main narrow-main">
+        <section class="page-banner">
+            <p class="eyebrow">JOIN THE TABLE</p>
+            <h1>Create your account</h1>
+            <p>Register to make planning your next meal easier.</p>
+        </section>
+        
+        <!-- REGISTRATION FORM: Fields are checked by JavaScript before the demo form is accepted. -->
+         <section class="form-panel">
+            <form id="registerForm" method="post" action="https://mercury.swin.edu.au/it000000/cos10005/regtest.php" novalidate>
+            <div class="form-row">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" placeholder="At least 5 characters">
+            </div>
+            <div class="form-row">
+                <label for="regEmail">Email address</label>
+                <input id="regEmail" name="email" type="email" placeholder="name@example.com">
+            </div>
+            <div class="form-row">
+                <label for="regPhone">Phone number</label>
+                <input id="regPhone" name="phone" type="tel" placeholder="Digits only">
+            </div>
+            <div class="form-two"><div class="form-row">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="At least 10 characters">
+            </div>
+                <div class="form-row">
+                    <label for="confirmPassword">Confirm password</label>
+                    <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Enter password again">
+                </div>
+            </div>
+            <fieldset class="form-row"><legend>Gender</legend>
+                <div class="radio-line"><label>
+                    <input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="other"> Prefer not to say</label>
+                </div>
+            </fieldset>
+            <div class="form-row">
+                <label for="regDiet">Dietary preference</label>
+                <select id="regDiet" name="diet">
+                    <option value="">Please select</option>
+                    <option>None</option>
+                    <option>Vegetarian</option>
+                    <option>Halal</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="country">Country / Region</label>
+                <select id="country" name="country">
+                    <option value="">Please select</option>
+                    <option>Malaysia</option>
+                    <option>Singapore</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <p id="registerErrors" class="form-message" aria-live="polite"></p>
+            <button class="button" type="submit">Create account</button>
+        </form>
+        <p class="small-note">This is a front-end assignment demonstration. No account details are stored in a database.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2026 DineFinder · Student project by Wen Jun</p>
+        <p>Discover local food, one table at a time.</p>
+    </footer>
+
+</body>
+</html>

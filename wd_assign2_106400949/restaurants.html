@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants | DineFinder</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER: Consistent navigation; active class marks this page. -->
+    <header class="site-header">
+        <a class="brand" href="index.html">Dine<span>Finder</span></a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a class="active" href="restaurants.html">Restaurants</a>
+            <a href="recommendation.html">Recommendations</a>
+            <a href="register.html">Register</a>
+            <a class="nav-button" href="reservation.html">Reservation</a>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="page-banner"><p class="eyebrow">THE DINEFINDER LIST</p>
+            <h1>Find your next favourite</h1>
+            <p>Six places around Kuala Lumpur and Subang Jaya to add to your food list.</p>
+        </section>
+
+    <!-- RESTAURANT CARDS: Each card includes cuisine, sample dishes, price, deposit and description. -->
+        <section class="restaurant-grid section">
+            <article class="restaurant-card"><img src="images/yellowbrickroad.jpg" alt="Cafe brunch plate with vegetables and eggs">
+                <div class="card-body"><span class="tag">Cafe · Western</span>
+                    <h2>Yellow Brick Road</h2>
+                    <p class="location">The Five, Bukit Damansara</p>
+                    <p>A lively cafe for brunch, coffee and desserts. It is a relaxed choice for friends who want to catch up over a hearty meal or enjoy a sweet treat.</p>
+                    <p class="dish"><strong>Popular picks:</strong> Big Breakfast Bash (est. RM32), pancakes (est. RM28)</p>
+                    <p class="price">RM20–RM40 <small>per person</small></p>
+                    <p class="deposit">Reservation deposit: RM20 per table</p>
+                    <a class="button small" href="reservation.html?restaurant=yellow">Book this restaurant</a>
+                </div>
+            </article>
+            <article class="restaurant-card"><img src="images/envi.jpg" alt="Elegant restaurant interior with tables and warm lights">
+                <div class="card-body"><span class="tag">Western · Fusion</span>
+                    <h2>Envi Skydining</h2>
+                    <p class="location">Menara TA One, Kuala Lumpur</p>
+                    <p>A rooftop dining venue known for its city skyline atmosphere. It can be a memorable setting for a date, celebration or dinner with visitors.</p>
+                    <p class="dish"><strong>Popular picks:</strong> Fusion mains (est. RM45), grilled dishes (est. RM48)</p>
+                    <p class="price">RM50–RM100 <small>per person</small></p>
+                    <p class="deposit">Reservation deposit: RM50 per table</p>
+                    <a class="button small" href="reservation.html?restaurant=envi">Book this restaurant</a>
+                </div>
+            </article>
+            <article class="restaurant-card"><img src="images/banggabangga.jpg" alt="Korean meal with rice and side dishes">
+                <div class="card-body"><span class="tag">Korean</span>
+                    <h2>Bang Ga Bang Ga Korean</h2>
+                    <p class="location">Jalan SS15/4, Subang Jaya</p>
+                    <p>A casual Korean restaurant serving comforting set meals and familiar Korean favourites. A good option for students and groups looking for a filling meal.</p>
+                    <p class="dish"><strong>Popular picks:</strong> Dakgangjeong set (est. RM25), rose tteokbokki (est. RM28)</p>
+                    <p class="price">RM20–RM40 <small>per person</small></p>
+                    <p class="deposit">Reservation deposit: RM20 per table</p>
+                    <a class="button small" href="reservation.html?restaurant=bangga">Book this restaurant</a>
+                </div>
+            </article>
+            <article class="restaurant-card"><img src="images/commonman.jpg" alt="Coffee and brunch at a cafe table">
+                <div class="card-body"><span class="tag">Cafe · Brunch</span>
+                    <h2>Common Man Coffee Roasters</h2>
+                    <p class="location">Menara SCP Societe, Desa Sri Hartamas</p>
+                    <p>A bright cafe with specialty coffee and a brunch-focused menu. It suits relaxed meetups, breakfast plans and casual conversations over coffee.</p>
+                    <p class="dish"><strong>Popular picks:</strong> Common Man Pancakes (est. RM28), coffee (est. RM14)</p>
+                    <p class="price">RM25–RM50 <small>per person</small></p>
+                    <p class="deposit">Reservation deposit: RM20 per table</p>
+                    <a class="button small" href="reservation.html?restaurant=commonman">Book this restaurant</a>
+                </div>
+            </article>
+            <article class="restaurant-card"><img src="images/buldojang.jpg" alt="Chinese-style noodles and dishes on a table">
+                <div class="card-body"><span class="tag">Korean · Korean-Chinese</span>
+                    <h2>Buldojang</h2>
+                    <p class="location">Jalan 24/70A, Desa Sri Hartamas</p>
+                    <p>A casual restaurant specialising in Korean-Chinese food. It is a choice for diners who enjoy noodle dishes and hearty savoury meals with friends or family.</p>
+                    <p class="dish"><strong>Popular picks:</strong> Jajangmyeon (est. RM22), sweet and sour pork (est. RM35)</p>
+                    <p class="price">RM20–RM45 <small>per person</small></p>
+                    <p class="deposit">Reservation deposit: RM20 per table</p>
+                    <a class="button small" href="reservation.html?restaurant=buldojang">Book this restaurant</a>
+                </div>
+            </article>
+            <article class="restaurant-card"><img src="images/ayamgepuk.jpg" alt="Crispy fried chicken served with dipping sauce">
+                <div class="card-body"><span class="tag">Indonesian · Casual</span>
+                    <h2>Ayam Gepuk Artisan</h2>
+                    <p class="location">Rock Cafe, Bandar Sunway</p>
+                    <p>A casual stop for Indonesian-style smashed fried chicken with rice and sambal. It is suitable for a quick, satisfying meal, especially for diners who enjoy spicy food.</p>
+                    <p class="dish"><strong>Popular picks:</strong> Ayam Klasik set (est. RM15), Ayam Krispy set (est. RM17)</p>
+                    <p class="price">RM10–RM25 <small>per person</small></p>
+                    <p class="deposit">Reservation deposit: RM10 per table</p>
+                    <a class="button small" href="reservation.html?restaurant=ayam">Book this restaurant</a>
+                </div>
+            </article>
+        </section>
+        <p class="notice">Note: Dish prices and deposits shown are sample estimates for this student website. Please confirm current menus, prices and booking policies with each restaurant.</p>
+    </main>
+
+    <footer>
+        <p>© 2026 DineFinder · Student project by Wen Jun</p>
+        <p>Discover local food, one table at a time.</p>
+    </footer>
+    
+</body>
+</html>
