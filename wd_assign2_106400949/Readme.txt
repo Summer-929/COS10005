@@ -4,7 +4,7 @@ Student: Wen Jun
 1. WEBSITE STRUCTURE
 - index.html: Home page introducing DineFinder and its services.
 - restaurants.html: Six restaurant listings with cuisine, sample dishes, estimated prices, deposits and descriptions.
-- recommend.html: Preference form that recommends a restaurant using JavaScript rules.
+- recommendation.html: Preference form that recommends a restaurant using JavaScript rules.
 - register.html: Front-end registration form with JavaScript validation.
 - reservation.html: Reservation form with validation, restaurant selection, deposit display and conditional payment fields.
 - css/style.css: Shared wood-colour design and responsive layout.
